@@ -9,6 +9,7 @@ contract('合约和Lib的测试场景', async (accounts) => {
         it('compare可以工作', async () => {
             assert(await this.instance.compare(web3.utils.utf8ToHex("test"), web3.utils.utf8ToHex("test")));
             assert(! await this.instance.compare(web3.utils.utf8ToHex("test"), web3.utils.utf8ToHex("test1")));
+            assert(! await this.instance.compare(web3.utils.utf8ToHex("test"), web3.utils.utf8ToHex("test      ")));
         })
     })
 })
