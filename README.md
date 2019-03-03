@@ -15,7 +15,9 @@
 - 使用bytes32替代string，因为更省gas，相应的在调用时，使用下面代码编解码：
   - 调用时：web3.utils.utf8ToHex(string)
   - 获取返回值：web3.utils.hexToUtf8(bytes32)
+- Library中的函数不要改变合约状态，仅依赖输入执行简单操作，即“纯函数”。
 
 ## 参考链接
 
 - [相当不错的Solidity教程](https://www.bitdegree.org/learn/solidity-introduction)
+- [All you should know about libraries in solidity](https://medium.com/coinmonks/all-you-should-know-about-libraries-in-solidity-dd8bc953eae7)
