@@ -4,9 +4,9 @@ import "./libs/StringUtils.sol";
 
 contract ContractWithLib {
 
-  using StringUtils for bytes;
+  using StringUtils for string;
 
-  function compare(bytes memory str1, bytes memory str2) public pure  returns (bool) {
+  function compare(string memory str1, string memory str2) public pure  returns (bool) {
     return str1.equals(str2);
   }
 
